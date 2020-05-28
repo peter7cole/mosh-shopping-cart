@@ -1,3 +1,12 @@
+# React Tutorial - with Mosh Hamedani
+__Author__ Peter Cole  
+__Version__ 1.0.0
+
+## Overview
+Code along with the video tutorial
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
