@@ -1,9 +1,9 @@
-# React Tutorial - with Mosh Hamedani
+# React Tutorial: Shopping Cart - with Mosh Hamedani
 __Author__ Peter Cole  
 __Version__ 1.0.0
 
 ## Overview
-Code along with the video tutorial
+Coding along with the [video tutorial](https://www.youtube.com/watch?v=Ke90Tje7VS0), building the framework and UI for an e-commerce shopping cart.
 
 ---
 
