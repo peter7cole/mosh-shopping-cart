@@ -9,15 +9,23 @@ export default class Counter extends Component {
 		return (
 			<React.Fragment>
 				<span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-				<button className="btn btn-secondary btn-sm">Increment</button>
+				<button
+					onClick={this.handleIncrement}
+					className="btn btn-secondary btn-sm"
+				>
+					Increment
+				</button>
 			</React.Fragment>
 		);
 	}
 
+	handleIncrement = () => {
+		this.setState({ count: this.state.count + 1 });
+	};
+
 	getBadgeClasses() {
 		let classes = 'badge m-2 badge-';
-		classes += this.state.count === 0 ? 'warning' : 'primary';
-		return classes;
+		return (classes += this.state.count === 0 ? 'warning' : 'primary');
 	}
 
 	formatCount() {
