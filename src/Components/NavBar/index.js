@@ -6,7 +6,10 @@ export default class NavBar extends Component {
 			<div>
 				<nav className="navbar navbar-light bg-light">
 					<a className="navbar-brand" href="/">
-						Navbar
+						Cart{' '}
+						<span className="badge badge-pill badge-secondary">
+							{this.props.totalCounters}
+						</span>
 					</a>
 				</nav>
 			</div>
