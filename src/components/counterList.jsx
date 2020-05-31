@@ -11,11 +11,22 @@ export default class counterList extends Component {
 		]
 	};
 
+	handleDelete = counterId => {
+		const counters = this.state.counters.filter(
+			counter => counter.id !== counterId
+		);
+		this.setState({ counters });
+	};
+
 	render() {
 		return (
 			<div>
 				{this.state.counters.map(counter => (
-					<Counter key={counter.id} value={counter.value} />
+					<Counter
+						key={counter.id}
+						onDelete={this.handleDelete}
+						counter={counter}
+					/>
 				))}
 			</div>
 		);
