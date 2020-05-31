@@ -10,6 +10,7 @@ export default class counterList extends Component {
 			{ id: 4, value: 0 }
 		]
 	};
+
 	render() {
 		return (
 			<div>
