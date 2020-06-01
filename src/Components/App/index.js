@@ -6,12 +6,21 @@ import CounterList from '../CounterList';
 export default class App extends Component {
 	state = {
 		counters: [
-			{ id: 1, value: 0 },
-			{ id: 2, value: 0 },
-			{ id: 3, value: 0 },
-			{ id: 4, value: 0 }
+			{ id: 1, name: 'Fire', value: 0 },
+			{ id: 2, name: 'Water', value: 0 },
+			{ id: 3, name: 'Air', value: 0 },
+			{ id: 4, name: 'Earth', value: 0 }
 		]
 	};
+
+	// constructor(props) {
+	// 	super(props);
+	// 	console.log('App - Constructor');
+	// }
+
+	componentDidMount() {
+		// console.log('App - Mounted');
+	}
 
 	handleReset = () => {
 		const counters = this.state.counters.map(c => {
@@ -21,11 +30,11 @@ export default class App extends Component {
 		this.setState({ counters });
 	};
 
-	handleIncrement = selectedCounter => {
+	handleQuantityChange = (selectedCounter, direction) => {
 		const newCounters = [...this.state.counters];
 		const index = newCounters.indexOf(selectedCounter);
 		newCounters[index] = { ...selectedCounter };
-		newCounters[index].value++;
+		newCounters[index].value += direction;
 		this.setState({ counters: newCounters });
 	};
 
@@ -37,6 +46,7 @@ export default class App extends Component {
 	};
 
 	render() {
+		// console.log('App - Rendered');
 		return (
 			<React.Fragment>
 				<NavBar
@@ -48,7 +58,7 @@ export default class App extends Component {
 					<CounterList
 						counters={this.state.counters}
 						onReset={this.handleReset}
-						onIncrement={this.handleIncrement}
+						onQuantityChange={this.handleQuantityChange}
 						onDelete={this.handleDelete}
 					/>
 				</main>
