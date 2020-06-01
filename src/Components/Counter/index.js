@@ -16,7 +16,7 @@ export default class Counter extends Component {
 
 	render() {
 		// console.log('Counter - Rendered');
-		let { counter, onQuantityChange, onDelete } = this.props;
+		const { counter, onQuantityChange, onDelete } = this.props;
 		return (
 			<div>
 				<h4>{counter.name}</h4>
