@@ -1,4 +1,4 @@
-# React Tutorial: Shopping Cart - with Mosh Hamedani
+# Shopping Cart - React Tutorial with Mosh Hamedani
 
 **Author** Peter Cole  
 **Version** 1.0.6
